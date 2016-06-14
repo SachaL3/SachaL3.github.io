@@ -1,15 +1,56 @@
 body {
-		background-color: blue;
-		color: white;
+  background:
+    url(http://www.sunnyneo.com/userlookups/UL_acezafara_fixed.png) fixed bottom center no-repeat,
+    url(http://www.sunnyneo.com/userlookups/UL_acezafara_bg.jpg) repeat;
+}
+
+ /* The background image */
+    background-image: url("http://www.sunnyneo.com/userlookups/UL_acezafara_fixed.png");
+    /* Set a specified height, or the minimum height for the background image */
+    min-height: 500px;
+    /* Set background image to fixed (don't scroll along with the page) */
+    background-attachment: fixed;
+    /* Center the background image */
+    background-position: center;
+    /* Set the background image to no repeat */
+    background-repeat: no-repeat;
+    /* Scale the background image to be as large as possible */
+    background-size: cover;
+
+{
+background: #222f57 url("http://www.sunnyneo.com/userlookups/UL_acezafara_bg.jpg") 0px 658px fixed;
+}
+#zaffy {
+    position: fixed !important;
+    left: 563px;
+    bottom: 0px;
+    z-index: 100;
+    background: url("http://www.sunnyneo.com/userlookups/UL_acezafara_fixed.png");
+    width: 477px;
+    height: 602px;
 }
 
 p, li {
-	font-size: 30px;
+    font-size: 30px;
 }
 img {
-	width: 20%;
+    width: 20%;
 }
 h1 {
-	font-size: 50px;
-	text-align: center;
+    font-size: 50px;
+    text-align: center;
+}
+p {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+div.container {
+    border: 1px solid red;
+    margin-left: 100px;
+}
+
+p.one {
+    margin-left: inherit;
 }
