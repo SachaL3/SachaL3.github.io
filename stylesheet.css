@@ -2,10 +2,8 @@ body {
   background:
     url(http://www.sunnyneo.com/userlookups/UL_acezafara_fixed.png) fixed bottom center no-repeat,
     url(http://www.sunnyneo.com/userlookups/UL_acezafara_bg.jpg) repeat;
-background-color: white
+  background-color: white;
 }
-
-
  /* The background image */
     background-image: url("http://www.sunnyneo.com/userlookups/UL_acezafara_fixed.png");
     /* Set a specified height, or the minimum height for the background image */
@@ -34,11 +32,19 @@ background: #222f57 url("http://www.sunnyneo.com/userlookups/UL_acezafara_bg.jpg
 
 p, li {
     font-size: 30px;
+    text-align: center;
+    color: white;
 }
 img {
     width: 20%;
 }
 h1 {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+h3 {
     font-size: 50px;
     text-align: center;
 }
@@ -47,6 +53,8 @@ p {
     margin-bottom: 100px;
     margin-right: 150px;
     margin-left: 80px;
+    text-align: center;
+    color: white;
 }
 div.container {
     border: 1px solid red;
@@ -56,6 +64,75 @@ div.container {
 p.one {
     margin-left: inherit;
 }
+
+
+/*footer*/
+
+#footer {
+    position: fixed;
+    z-index: -3;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.container2 {
+    margin: 300px 100px 30px 100px;
+    background-color: rgba(255, 255, 255, 0.38);
+    border: none;
+    border-radius: 25px;
+    filter: alpha(opacity=60);  /*For IE8 and earlier */
+    opacity: 0;
+  }
+
+  .toggle{
+
+    opacity: 1;
+    webkit-transition: opacity 1s;
+    transition: opacity 1s;
+
+  }
+
+
+
+/*img {
+    position:center fixed;
+    opacity: 0.8;
+    background-size: 1600px auto;
+   filter: alpha(opacity=50);
+   width: 50%;
+}*/
+
+
+#content {
+    background: #D0E5FF;
+    padding: 20px;
+    color: #00214B;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.8;
+    z-index: 5;
+}
+#footer {
+    background: #0070FF;
+     z-index: 0;
+    line-height: 2, fixed;
+    text-align: center;
+    color: #042E64;
+    fillopacity: 0.2 
+       opacity: 0.9;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #84BAFF;
+    box-shadow: 0 0 15px #00214B;
+}
+
+
+/*Comments box*/
 
 #respond {
   margin-top: 40px;
