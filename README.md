@@ -1,12 +1,15 @@
 # SachaL3.github.io #
+HTML & CSS for basic website
+JavaScript & APIs
+
+README.md (used Markdown)
+GitHub used as an interface to showcase the documents produced
 
 ## Sacha's Website ##
 
-HTML & CSS for basic website
-
 <u>What I have learnt over the past week:</u>
 
-Monday 13th June to Friday 17th June 2016
+<b>Monday 13th June to Friday 17th June 2016</b>
 
 <i>Acknowledgements: Thank you to Founders & Coders for their help in teaching us these skills. And QMUL for organising this event for SEMS students.</i>
 
