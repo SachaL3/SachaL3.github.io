@@ -1,3 +1,7 @@
+* {
+  color: white;
+}
+
 body {
   background:
     url(http://www.sunnyneo.com/userlookups/UL_acezafara_fixed.png) fixed bottom center no-repeat,
@@ -16,7 +20,6 @@ body {
     background-repeat: no-repeat;
     /* Scale the background image to be as large as possible */
     background-size: cover;
-
 {
 background: #222f57 url("http://www.sunnyneo.com/userlookups/UL_acezafara_bg.jpg") 0px 658px fixed;
 }
@@ -30,10 +33,26 @@ background: #222f57 url("http://www.sunnyneo.com/userlookups/UL_acezafara_bg.jpg
     height: 602px;
 }
 
+header {
+  margin-right: 150px;
+  margin-left: 150px;
+}
+section { 
+  margin-right: 250px;
+  margin-left: 250px;
+}
+    p {
+       margin-top: 150px;
+    }
 p, li {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     color: white;
+  /*  margin-top: 50px;
+    margin-bottom: 100px;*/
+    margin-right: 50px;
+    margin-left: 50px;
+    cursor: crosshair;
 }
 img {
     width: 20%;
@@ -43,9 +62,8 @@ h1 {
     text-align: center;
     color: white;
 }
-
-h3 {
-    font-size: 50px;
+.respond h3 {
+    font-size: 20px;
     text-align: center;
 }
 p {
@@ -53,6 +71,7 @@ p {
     margin-bottom: 100px;
     margin-right: 150px;
     margin-left: 80px;
+    font-size: 20px;
     text-align: center;
     color: white;
 }
@@ -65,6 +84,24 @@ p.one {
     margin-left: inherit;
 }
 
+/*spinning moon*/
+
+/*div.solid-color-spin {
+background-image: url("http://static.tumblr.com/f9fac11f36b1524a8a49589653abcf18/stck0ly/LLPo1zykr/tumblr_static_554jbbbt1f8cs0ookc48gcw4s.png");
+border-radius: 50%;
+z-index: -1;
+position: top right fixed;
+width: 30%;
+margin-left: 65%;
+margin-top: -40px;
+height: 390px;
+background-size: 95%;
+animation: spin 50s linear infinite
+}
+@keyframes spin {
+from {transform:rotate(0deg);}
+to {transform:rotate(360deg);}
+*/
 
 /*footer*/
 
@@ -129,13 +166,30 @@ p.one {
     font-weight: bold;
     text-shadow: 0 1px 0 #84BAFF;
     box-shadow: 0 0 15px #00214B;
+    /*animation: text 40s linear infinite*/
 }
 
+/*scrolling text with effects?*/
+/*.example1 {
+ height: 50px;  
+ overflow: hidden;
+ position: relative;
+}
+.example1 h3 {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;*/
 
 /*Comments box*/
 
 #respond {
   margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 #respond input[type='text'],
@@ -144,6 +198,8 @@ p.one {
   margin-bottom: 10px;
   display: block;
   width: 100%;
+   opacity: 0.5;
+    filter: alpha(opacity=50);
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 5px;
@@ -155,3 +211,8 @@ p.one {
 
   line-height: 1.4em;
 }
+
+/*comments displayed*/
+/*#posts-list.has-comments li.no-comments {
+  display: none;
+}*/

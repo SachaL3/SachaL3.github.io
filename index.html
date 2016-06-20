@@ -2,45 +2,120 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    	<h1> What I <i>Learnt</i></h1>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <title>My webpage</title>
-    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta charset="utf-8"></meta>
+    <title>My webpage QMUL HTML&CSS</title> <!-- Name of Tab -->
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css"><!-- self closing -->
+      <h1> <b>What I </b> <i>Learnt</i></h1>
+   
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   </head>
  
 
 
-<body>
+<body text="white">
+  <header>
+      <h2>Showcasing my understanding ~</h2>
+  </header>
+  <section>
+  <font color="#FFD801">welcome</font>
+    <p>
+    <u>Introduction:</u></p><p>
+    A little about myself, I don't know much, so advice it limited. I am still learning so peace out ^_^
+    If you have any questions by all means write a comment (read the README.md file first). TY
+  </p></section>
+<!-- spinning object, doesn't allow api or footer to work -->
+    <section>
+      <ol>
+        <li>GitHub</li>
+        <li>API's</li>
+      </ol>
+    </section>
+<!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com"> HTML Comment Box</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0"/>
+ 
+<!-- end www.htmlcommentbox.com -->
 
 
-<p>Hello and welcome to my page, I have had to edit a few things as I messed up my previous html</p>
+  <div>
+    <p>Hello and welcome to my page, I have had to edit a few things as I messed up my previous html.</p>
+    <p>This is my FAC Site...</p>
+    <p>Just to walk you through a few things, the following images should take to to places you may like to visit, please click them and find out more!</p>
 
-<div id="respond">
+  <div class="row">
+    <div class="col-md-6" >
 
-  <h3>Leave a Comment</h3>
+        <div id="respond">
 
-  <form action="post_comment.php" method="post" id="commentform">
+          <h4>By all means try to Leave a Comment, it won't work as I have not managed to work out a .php storing system...</h4>
 
-    <label for="comment_author" class="required">Your name</label>
-    <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
+          <form action="post_comment.php" method="post" id="commentform">
 
-    <label for="email" class="required">Your email;</label>
-    <input type="email" name="email" id="email" value="" tabindex="2" required="required">
+              <label for="comment_author" class="required">Your name</label>
+               <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
 
-    <label for="comment" class="required">Your message</label>
-    <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
+              <label for="email" class="required">Your email</label>
+               <input type="email" name="email" id="email" value="" tabindex="2" required="required">
 
-    <-- comment_post_ID value hard-coded as 1 -->
-    <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
-    <input name="submit" type="submit" value="Submit comment" />
+              <label for="comment" class="required">Your message</label>
+              <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
 
-  </form>
+             <!-- comment_post_ID value hard-coded as 1, value="1" -->
+              <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />
+              <input name="submit" type="submit" value="Submit comment" />
+          </form>
+      
+      <!-- <div class="container2">
+           <div class="row">
+              <div class="col-10 offset-1"></div> -->
+        </div>
+    </div>
+    <div class="col-md-3" border-color="block white">
+   <!--  <div class="solid-color-spin"></div> -->
 
-</div>
+<!--  <textarea id="title" type="text "rows="10" cols="20" onkeyup="Allow()" ></textarea>
+      <input type="submit" value="POST COMMENT" onclick="insert()" /></form>
+      <div id="display"></div> -->
+      <table cellpadding="10" border="10"><tr><td>Text in here</td></tr></table> <!-- border="bold" -->
+      <br>
+      <table cellpadding="20" border-style="solid" bordercolor="green"><tr><td width="80%">Text in here 80%</td><td width="20%">Text in here 20%</td></tr></table>
+      <br>
+      <table cellpadding="20" border-style="dotted" bordercolor="red"><tr><td>Text in here A</td><td>Text in here B</td></tr><tr><td>Text in here C</td><td>Text in here D</td></tr></table>
+    </div>
+   
+    <div class="col-md-3">
+        <p>Special Thanks to the following Members who have help with this production
+          <ul>
+            <a target="_blank" title="NEW" href="https://bbc.co.uk"></a>
+            <li>Sohil Pandya</li>
+            <li>Mireia Sangalo</li>
+            <li>Tormod Smith</li>
+            <li>Jack Tierney</li>
+          </ul>
+        </p>
+    </div>
+  </div>
 
-		<div id="footer">Footer - Just scroll...</div>
-    <script src="app.js"></script>
 
+      <div>
+       <img src="https://lh6.ggpht.com/SFtUqMcrJcmSYDJjr1OZun4JiXDWdiDNvYIlrPi_LYxDVUFB_ge99GSZe679olCyZ5E=h900" alt="Fsssh" height="50%" width="50%">
+      <img src="./copy_BADM.jpg" alt="Badminton Shuttle Advice" height="60%" width="60%"/>
+      </div>
+  </div>
+  <!-- http://www.quackit.com/html/codes/scrolling_text.cfm -->
+
+  <section>GO GET A GITHUB ACCOUNT</section>
+
+  <div id="footer">
+  <!-- <div class="example1">
+<h3>This Page was created by SachaL3, stay turned for more information! <p>Many Thanks to Founders & Coders for their collaboration with QMUL for organising this course for SEMS students...</p></h3>
+</div> -->
+<marquee behavior="scroll" direction="left" bgcolor="darkblue" style="text-shadow: 2px 2px 2px #666666">This Page was created by SachaL3, stay turned for more information! &nbsp; &nbsp; &nbsp; Many Thanks to Founders & Coders for their collaboration with QMUL for organising this course for SEMS students...</marquee>
+  </div>
+
+      <img src="http://apod.nasa.gov/apod/image/1606/DrumRoll2_960.jpg" max-width = 50% max-height=50%>
+    <script src="app.js" type="text/javascript"></script>
+ <!-- <script type="text/javascript" language="javascript" id="hcb"> </script> -->
       </body>
     </html>
