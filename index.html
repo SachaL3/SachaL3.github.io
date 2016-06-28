@@ -9,19 +9,43 @@
    
     
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <script>
+            var looper;
+            var degrees = 0;
+            function rotateAnimation(el,speed){
+              var cog1 = document.getElementById(el);
+              if(navigator.userAgent.match("Chrome")){
+                cog1.style.WebkitTransform = "rotate("+degrees+"deg)";
+              }else if(navigator.userAgent.match("Firefox")){
+                cog1.style.MozTransform = "rotate("+degrees+"deg)";
+              }else if(navigator.userAgent.match("MSIE")){
+                cog1.style.msTransform = "rotate("+degrees+"deg)";
+              }else if(navigator.userAgent.match("Opera")){
+                cog1.style.OTransform = "rotate("+degrees+"deg)";
+              }else{
+                cog1.style.transform = "rotate("+degrees+"deg)";
+              }
+              looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')', speed);
+              degrees++;
+              if(degrees > 359){
+                degrees = 1;
+              }
+              document.getElementById("status").innerHTML = "rotate("+degrees+"deg)"; //for showing the rotating degrees
+            }
+      </script>
   </head>
  
 
-
 <body text="white">
-<div class="rocket"><img src="http://1.bp.blogspot.com/_ZZwcWAd8-r8/TUX56btozUI/AAAAAAAACbU/1flPptwuCYs/s1600/rocketship+1.png"></div>
+<div class="rocket">
+ <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box4');"><img src="http://1.bp.blogspot.com/_ZZwcWAd8-r8/TUX56btozUI/AAAAAAAACbU/1flPptwuCYs/s1600/rocketship+1.png"></a></p></div>
+
     <div id="popup-box1" class="popup-position">
         <div id="popup-wrapper"> <!-- class for positionning in CSS -->
          <p style="text-align: right;"><a href="javascript:void(0)" onclick="toggle_visibility('popup-box1');">X</a></p>
           <div id="popup-container">
             <h3> Popup box 1</h3>
-            <p>Congratulations, you've opened up popup box 1!<br> Close the box at the top and click on box 2.</p>
-           
+            <p>Congratulations, you've opened up popup box 1!<br>Close the box at the top and click on box 2.</p>
             </div><!-- Popup container end, background for popup box-->
         </div><!-- Popup wrapper popup end -->
     </div> <!-- Popup box 1 end-->
@@ -33,7 +57,7 @@
             <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box2');">Close popup box</a></p>
           </div><!-- Popup container end, background for popup box-->
         </div><!-- Popup wrapper popup end -->
-    </div> <!-- Popup box 1 end-->
+    </div> <!-- Popup box 2 end-->
     <div id="popup-box3" class="popup-position">
         <div id="popup-wrapper"> <!-- class for positionning in CSS -->
           <div id="popup-container">
@@ -42,8 +66,25 @@
             <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box3');"><img src="http://vignette1.wikia.nocookie.net/clubpenguin/images/5/59/Cheese_Pin.png/revision/latest?cb=20121229072939"></a></p>
           </div><!-- Popup container end, background for popup box-->
         </div><!-- Popup wrapper popup end -->
-    </div> <!-- Popup box 1 end-->
+    </div> <!-- Popup box 3 end-->
 
+ <div id="popup-box4" class="popup-position">
+        <div id="popup-wrapper"> <!-- class for positionning in CSS -->
+          <div id="popup-container">
+            <h3><i>Rocket Man!</i></h3>
+            <p>OMG you've found another popup!<br>Look for Jupiter...</p>
+            <h5 style="width:150px;" id="status"></h5>
+          </div><!-- Popup container end, background for popup box-->
+        </div><!-- Popup wrapper popup end --> 
+        <p class="jupiterR" style="text-align: right;"><a href="javascript:void(0)" onclick="toggle_visibility('popup-box4');"><img id="abc" src="http://a1star.com/images/planet-jupiter-large.gif" alt="jupiter"></a></p>
+          <script>rotateAnimation("abc",20);</script>
+          
+<!-- <div class="jupiterR"> -->
+    </div> <!-- Popup box 4 end-->
+
+    <!--  test: needs js in html-->
+    <!-- <p><img id="abc" src="http://a1star.com/images/planet-jupiter-large.gif" alt="jupiter">
+          <script>rotateAnimation("abc",20);</script></p> -->
   <header>
       <h2>Showcasing my understanding ~</h2>
   </header>
@@ -165,6 +206,7 @@
        <li> <a target="_blank" href="http://www.w3schools.com">w3schools</a></li>
        <li> Images from Google-images</li>
        <li> Quackit on <a target="_blank" href="http://www.quackit.com/html/codes/scrolling_text.cfm">Scrolling Text</a></li>
+       <li> JS rotation in HTML, <a target="_blank" href="https://www.developphp.com/video/JavaScript/Transform-Rotate-Image-Spin-Smooth-Animation-Tutorial">Transform Rotate Image Spin Smooth Animation Tutorial</a></li>
     </ul>
     <strong>Lastly, apologies if your source has not been mentioned.</strong>
     <br>However HTML5 does not support some of these attributes.</p></font></section>
