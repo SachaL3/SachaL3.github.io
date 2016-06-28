@@ -73,6 +73,10 @@ function increment() {
 			var hour = Math.floor(time/10/60/60);
 			var tenth = Math.floor(time%100);
 
+			if(hour<10){
+				hour = "0" + hour;
+			}
+
 			if(min<10){
 				min = "0" + min;
 			}
@@ -83,10 +87,17 @@ function increment() {
 				tenth = "0" + tenth;
 			}
 			
-
-
-			document.getElementById("output").innerHTML = hour + ": " + min + ": " + sec + ": " + tenth;
+			document.getElementById("output").innerHTML = hour + ":" + min + ":" + sec + ":" + tenth;
 			increment();
 	}, 10);
 	}
 };
+
+// popup-box
+function toggle_visibility(id) {
+	var e = document.getElementById(id);
+	if(e.style.display == 'block')
+		e.style.display = 'none';
+	else
+		e.style.display = 'block';
+}
