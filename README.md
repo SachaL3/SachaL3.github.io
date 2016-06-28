@@ -21,3 +21,9 @@ Added a comments section, however I would like to display users' comments on the
 Note: Rotating images affect footer display ~ currently working out why.
 
 I have added a footer with a moving element using CSS, there is also the marquee tag that allows messages to pass like a bulletin, however this removes certain effects such as text-shadow and text-color.
+
+<br> Current Updates<br>
+<ul>
+	<li>28.06.2016
+		Added Pop-Up Boxes, and credits</li>
+</ul>
