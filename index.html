@@ -5,46 +5,15 @@
     <meta charset="utf-8"></meta>
     <title>My webpage QMUL HTML&CSS</title> <!-- Name of Tab -->
     <link rel="stylesheet" type="text/css" href="./stylesheet.css"/><!-- self closing -->
+    <link rel="stylesheet" type="text/css" href="./jupiter.css"/><!-- self closing -->
       <h1> <b>What I </b> <i>Learnt</i></h1>
-   
-    
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-      <script>
-            var looper;
-            var degrees = 0;
-            function rotateAnimation(el,speed){
-              var cog1 = document.getElementById(el);
-              if(navigator.userAgent.match("Chrome")){
-                cog1.style.WebkitTransform = "rotate("+degrees+"deg)";
-              }else if(navigator.userAgent.match("Firefox")){
-                cog1.style.MozTransform = "rotate("+degrees+"deg)";
-              }else if(navigator.userAgent.match("MSIE")){
-                cog1.style.msTransform = "rotate("+degrees+"deg)";
-              }else if(navigator.userAgent.match("Opera")){
-                cog1.style.OTransform = "rotate("+degrees+"deg)";
-              }else{
-                cog1.style.transform = "rotate("+degrees+"deg)";
-              }
-              looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')', speed);
-              //clockwise, cw
-              degrees++;
-              if(degrees > 359){
-                degrees = 1;
-                //counter-clockwise, ccw
-              //      degrees--;
-              // if(degrees < 359){
-              //   degrees = -1;             
-              }
-              document.getElementById("status").innerHTML = "rotate("+degrees+"deg)"; //for showing the rotating degrees
-            }
-      </script>
   </head>
  
-
 <body text="white">
-<div class="rocket">
- <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box4');"><img src="http://1.bp.blogspot.com/_ZZwcWAd8-r8/TUX56btozUI/AAAAAAAACbU/1flPptwuCYs/s1600/rocketship+1.png"></a></p></div>
-
+    <div class="rocket">
+     <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box4');"><img src="http://1.bp.blogspot.com/_ZZwcWAd8-r8/TUX56btozUI/AAAAAAAACbU/1flPptwuCYs/s1600/rocketship+1.png"></a></p>
+    </div>
     <div id="popup-box1" class="popup-position">
         <div id="popup-wrapper"> <!-- class for positionning in CSS -->
          <p style="text-align: right;"><a href="javascript:void(0)" onclick="toggle_visibility('popup-box1');">X</a></p>
@@ -82,37 +51,26 @@
           </div><!-- Popup container end, background for popup box-->
         </div><!-- Popup wrapper popup end --> 
         <p class="jupiterR" style="text-align: right;"><a href="javascript:void(0)" onclick="toggle_visibility('popup-box4');"><img id="abc" src="http://a1star.com/images/planet-jupiter-large.gif" alt="jupiter"></a></p>
-          <script>rotateAnimation("abc",30);</script> <!--faster speed lower number-->
-          
-<!-- <div class="jupiterR"> -->
+          <script src="jupiter.js" type="text/javascript"></script>
+          <script>rotateAnimation("abc",50);</script> <!--faster speed lower number-->
     </div> <!-- Popup box 4 end-->
 
-    <!--  test: needs js in html-->
-    <!-- <p><img id="abc" src="http://a1star.com/images/planet-jupiter-large.gif" alt="jupiter">
-          <script>rotateAnimation("abc",20);</script></p> -->
   <header>
       <h2>Showcasing my understanding ~</h2>
   </header>
   <section>
-  <font color="#FFD801">welcome</font>
-    <p>
-    <u>Introduction:</u></p><p>
-    A little about myself, I don't know much, so advice it limited. I am still learning so peace out ^_^
-    If you have any questions by all means write a comment (read the README.md file first). TY
-  </p></section>
-<!-- spinning object, doesn't allow api or footer to work -->
+    <font color="#FFD801">welcome</font>
+    <p><u>Introduction:</u></p>
+    <p>A little about myself, I don't know much, so advice it limited. I am still learning so peace out ^_^
+    If you have any questions by all means write a comment (read the README.md file first). TY </p>
+  </section>
+
     <section>
       <ol>
         <li>GitHub</li>
         <li>API's</li>
       </ol>
     </section>
-<!-- begin wwww.htmlcommentbox.com -->
- <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com"> HTML Comment Box</a> is loading comments...</div>
- <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0"/>
- 
-<!-- end www.htmlcommentbox.com -->
-
 
   <div>
     <p>Hello and welcome to my page, I have had to edit a few things as I messed up my previous html.</p>
@@ -121,34 +79,27 @@
 
   <div class="row">
     <div class="col-md-6" >
-
         <div id="respond">
-
           <h4>By all means try to Leave a Comment, it won't work as I have not managed to work out a .php storing system...</h4>
 
-          <form action="post_comment.php" method="post" id="commentform">
-
-              <label for="comment_author" class="required">Your name</label>
-               <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
-
-              <label for="email" class="required">Your email</label>
-               <input type="email" name="email" id="email" value="" tabindex="2" required="required">
-
-              <label for="comment" class="required">Your message</label>
-              <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
-
-             <!-- comment_post_ID value hard-coded as 1, value="1" -->
-              <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />
-              <input name="submit" type="submit" value="Submit comment" />
-          </form>
-    
+            <form action="post_comment.php" method="post" id="commentform">
+                <label for="comment_author" class="required">Your name</label>
+                 <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
+                <label for="email" class="required">Your email</label>
+                 <input type="email" name="email" id="email" value="" tabindex="2" required="required">
+                <label for="comment" class="required">Your message</label>
+                <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
+               <!-- comment_post_ID value hard-coded as 1, value="1" -->
+                <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />
+                <input name="submit" type="submit" value="Submit comment" />
+            </form>
         </div>
     </div>
 
       <div id="wrapper">
-          <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box1');"><!-- makes link do nothing, same name as div.id{popup-box1} something to do with having both id and class, so the id name can change but have the same styling. Hence don't want to style this id as would have to add a style for each -->Open popup box 1</a></p>
-          <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box2');"><!-- makes link do nothing -->Open popup box 2</a></p>
-          <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box3');"><!-- makes link do nothing -->Open popup box 3</a></p>
+          <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box1');"><!-- makes link do nothing, same name as div.id{popup-box1} have both id and class, id name can change whilst keeping same styling. Hence don't want to style this id as would have to add a style for each -->Open popup box 1</a></p>
+          <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box2');">Open popup box 2</a></p>
+          <p><a href="javascript:void(0)" onclick="toggle_visibility('popup-box3');">Open popup box 3</a></p>
       </div><!-- wrapper end, centres the page a bit, inc. margin -->
 
       <div id="output" class="watch">
@@ -163,19 +114,9 @@
 
 
     <div id="content" class="col-md-3" border-color="block white">
-      
 
-
-    <p>This section is just to highlight the column</p>
-    <br>
-<!--  <div class="container2">
-           <div class="row">
-              <div class="col-10 offset-1"></div>
-<div id="container" class="solid-color-spin"></div> -->
-
-<!--  <textarea id="title" type="text "rows="10" cols="20" onkeyup="Allow()" ></textarea>
-      <input type="submit" value="POST COMMENT" onclick="insert()" /></form>
-      <div id="display"></div> -->
+      <p>This section is just to highlight the column</p>
+      <br>
       <table cellpadding="10" border="10"><tr><td>Text in here</td></tr></table> <!-- border="bold" -->
       <br>
       <table cellpadding="20" border-style="solid" bordercolor="green"><tr><td width="80%">Text in here 80%</td><td width="20%">Text in here 20%</td></tr></table>
@@ -196,35 +137,42 @@
     </div>
   </div>
 
+  <div class="row">
+        <div class="col-md-3">
+          <img src="https://lh6.ggpht.com/SFtUqMcrJcmSYDJjr1OZun4JiXDWdiDNvYIlrPi_LYxDVUFB_ge99GSZe679olCyZ5E=h900" alt="Fsssh" height="50%" width="50%"><br>
+          <img src="./copy_BADM.jpg" alt="Badminton Shuttle Advice" height="60%" width="60%"/>
+        </div>
 
-      <div>
-       <img src="https://lh6.ggpht.com/SFtUqMcrJcmSYDJjr1OZun4JiXDWdiDNvYIlrPi_LYxDVUFB_ge99GSZe679olCyZ5E=h900" alt="Fsssh" height="50%" width="50%">
-      <img src="./copy_BADM.jpg" alt="Badminton Shuttle Advice" height="60%" width="60%"/>
+      <div class="col-md-1">--------------
+      </div> 
+
+      <div class="col-md-8">
+        <font face="verdana" color="blue">
+          <p style="text-align: left;"> Credit to the following external sources I used to add features to this page:<br>
+              <ul>
+                 <li> mjdwebdesign (YouTube) on <a target="_blank" href="https://www.youtube.com/watch?v=VnHvVz_bFKo">HTML, CSS & JS : Creating quick, simple popup boxes</a></li>
+                 <li> <a target="_blank" href="http://www.w3schools.com">w3schools</a></li>
+                 <li> Images from Google-images</li>
+                 <li> Quackit on <a target="_blank" href="http://www.quackit.com/html/codes/scrolling_text.cfm">Scrolling Text</a></li>
+                 <li> JS rotation in HTML, <a target="_blank" href="https://www.developphp.com/video/JavaScript/Transform-Rotate-Image-Spin-Smooth-Animation-Tutorial">Transform Rotate Image Spin Smooth Animation Tutorial</a></li>
+              </ul>
+          <strong>Lastly, apologies if your source has not been mentioned.</strong><br>However HTML5 does not support some of these attributes.</p>
+        </font>
       </div>
   </div>
- 
-  <section>GO GET A GITHUB ACCOUNT</section>
-  <section><font face="verdana" color="blue">
-  <p style="text-align: left;">Credit to the following external sources I used to add features to this page:<br>
-    <ul>
-       <li> mjdwebdesign (YouTube) on <a target="_blank" href="https://www.youtube.com/watch?v=VnHvVz_bFKo">HTML, CSS & JS : Creating quick, simple popup boxes</a></li>
-       <li> <a target="_blank" href="http://www.w3schools.com">w3schools</a></li>
-       <li> Images from Google-images</li>
-       <li> Quackit on <a target="_blank" href="http://www.quackit.com/html/codes/scrolling_text.cfm">Scrolling Text</a></li>
-       <li> JS rotation in HTML, <a target="_blank" href="https://www.developphp.com/video/JavaScript/Transform-Rotate-Image-Spin-Smooth-Animation-Tutorial">Transform Rotate Image Spin Smooth Animation Tutorial</a></li>
-    </ul>
-    <strong>Lastly, apologies if your source has not been mentioned.</strong>
-    <br>However HTML5 does not support some of these attributes.</p></font></section>
+  </div>
+   
+  <div class="row"><section>GO GET A GITHUB ACCOUNT</section> <img src="http://apod.nasa.gov/apod/image/1606/DrumRoll2_960.jpg" max-width = 50% max-height=50%></div>
+
+<img id="moon" src="http://static.tumblr.com/f9fac11f36b1524a8a49589653abcf18/stck0ly/LLPo1zykr/tumblr_static_554jbbbt1f8cs0ookc48gcw4s.png">
+  <!-- <script src="jupiter.js" type="text/javascript"></script> -->
+<script>rotateMoon("moon",100);</script>
 
   <div id="footer">
-  <!-- <div class="example1">
-<h3>This Page was created by SachaL3, stay turned for more information! <p>Many Thanks to Founders & Coders for their collaboration with QMUL for organising this course for SEMS students...</p></h3>
-</div> -->
-<marquee behavior="scroll" direction="left" bgcolor="midnightblue" style="text-shadow: 2px 2px 2px #666666">This Page was created by SachaL3, stay turned for more information! &nbsp; &nbsp; &nbsp; Many Thanks to Founders & Coders for their collaboration with QMUL for organising this course for SEMS students...</marquee>
+    <marquee behavior="scroll" direction="left" bgcolor="midnightblue" style="text-shadow: 2px 2px 2px #666666">This Page was created by SachaL3, stay turned for more information! &nbsp; &nbsp; &nbsp; Many Thanks to Founders & Coders for their collaboration with QMUL for organising this course for SEMS students...</marquee>
   </div>
 
-      <img src="http://apod.nasa.gov/apod/image/1606/DrumRoll2_960.jpg" max-width = 50% max-height=50%>
     <script src="app.js" type="text/javascript"></script>
- <!-- <script type="text/javascript" language="javascript" id="hcb"> </script> -->
-      </body>
-    </html>
+ <!-- <script type="text/javascript" language="javascript" id="hcb"></script> -->
+</body>
+</html>

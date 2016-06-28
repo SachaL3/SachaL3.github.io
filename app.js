@@ -1,3 +1,7 @@
+///This js contains: stopwatch & comments section ONLY
+// popup-box - see jupiter.js
+//spinning jupiter - see jupiter.js
+
 var titles = [];
 var titleInput = document.getElementById("title");
 var messageBox = document.getElementById("display");
@@ -25,16 +29,14 @@ messageBox.innerHTML = "";
 messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
 }
 
-
 // .....for comments
-// if(!window.hcb_user){hcb_user={
-
-// };
+// if(!window.hcb_user){hcb_user={ };
 // } (function(){
 // 	var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");
 // 	s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1466373177533");
 // 	if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);
 // })();
+
 
 ////////..............................Stop Watch
 var time = 0;
@@ -50,10 +52,7 @@ function startPause() {
 		running = false;
 		document.getElementById("startPause").innerHTML = "Resume";
 	}
-
 }
-
-
 
 function reset() {
 	running = false;
@@ -63,9 +62,7 @@ function reset() {
 }
 
 function increment() {
-
 	if(running == true) {
-
 		setTimeout(function() {
 			time++;
 			var min = Math.floor(time/100/60);
@@ -73,55 +70,21 @@ function increment() {
 			var hour = Math.floor(time/10/60/60);
 			var tenth = Math.floor(time%100);
 
-			if(hour<10){
+			if(hour<10) {
 				hour = "0" + hour;
 			}
-
-			if(min<10){
+			if(min<10) {
 				min = "0" + min;
 			}
-			if(sec<10){
+			if(sec<10) {
 				sec = "0" + sec;
 			}
-			if(tenth<10){
+			if(tenth<10) {
 				tenth = "0" + tenth;
 			}
-			
 			document.getElementById("output").innerHTML = hour + ":" + min + ":" + sec + ":" + tenth;
 			increment();
-	}, 10);
-	}
+		}, 10);
+	};
 };
 
-// popup-box
-function toggle_visibility(id) {
-	var e = document.getElementById(id);
-	if(e.style.display == 'block')
-		e.style.display = 'none';
-	else
-		e.style.display = 'block';
-}
-
-//spinning jupiter
-// var looper;
-// var degrees = 0;
-// function rotateAnimation(el,speed){
-// 	var cog1 = document.getElementById(el);
-// 	if(navigator.userAgent.match("Chrome")){
-// 		cog1.style.WebkitTransform = "rotate("+degrees+"deg)";
-// 	}else if(navigator.userAgent.match("Firefox")){
-// 		cog1.style.MozTransform = "rotate("+degrees+"deg)";
-// 	}else if(navigator.userAgent.match("MSIE")){
-// 		cog1.style.msTransform = "rotate("+degrees+"deg)";
-// 	}else if(navigator.userAgent.match("Opera")){
-// 		cog1.style.OTransform = "rotate("+degrees+"deg)";
-// 	}else{
-// 		cog1.style.transform = "rotate("+degrees+"deg)";
-// 	}
-// 	looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')', speed);
-// 	degrees++;
-// 	if(degrees > 359){
-// 		degrees = 1;
-// 	}
-// 	document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
-// }

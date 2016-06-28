@@ -1,0 +1,67 @@
+ /*The element to apply the animation to */
+div.rocket {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: -200px;
+  /*animation: flyinG 5s linear 2s infinite alternate;*/
+   /*/* width: 200px;
+    height: 200px;
+/*    background-color: red;
+    animation-name: speed;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;*/
+    -webkit-animation: RocketMove 5s infinite; /* Chrome, Safari, Opera  */
+    animation: RocketMove 5s infinite;
+}
+@keyframes RocketMove {
+    0%   {top: 10px;}   /*0%   {top: 0px;}*/
+    25%  {top: 20px;}   /*25%  {top: 200px;}*/
+    75%  {top: 50px;}    /*75%  {top: 50px}*/
+    100% {top: 20px;}   /*100% {top: 100px;}*/ 
+}
+
+
+
+/*Popup box */ /*position relative?*/
+.popup-position { display: none; position: fixed; top: 10%; left: 0; background-color: rgba[0,0,0,0.7]; width: 100%; height: 100%; z-index: 5;}
+/* display:none gets rid of the popup; absolute (fixed to top of page), or fixed (to page) - background can still scroll*/
+#popup-wrapper { width: 500px; margin: 70px auto; text-align: left; z-index: 5;}
+#popup-container { background-color: darkgrey; padding: 10px; border-radius: 10px; z-index: 5;}
+/*footer has z-index of 10*/
+#wrapper( width: 960px; margin: 40px auto; text-align: left;)
+
+
+/*spinning moon*/
+
+
+/*  
+#moon {position: absolute;  
+  margin-right: -200px;
+   top: 80px;
+    left: 1000px; 
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+    width: 46px;
+    height: 44px;
+    background: url(http://static.tumblr.com/f9fac11f36b1524a8a49589653abcf18/stck0ly/LLPo1zykr/tumblr_static_554jbbbt1f8cs0ookc48gcw4s.png) 0 0;
+}*/
+
+/*div#container.solid-color-spin {
+background-image: url("http://static.tumblr.com/f9fac11f36b1524a8a49589653abcf18/stck0ly/LLPo1zykr/tumblr_static_554jbbbt1f8cs0ookc48gcw4s.png");
+border-radius: 50%;
+z-index: -1;
+position: top right fixed;
+width: 60%;
+margin-left: 65%;
+margin-top: -40px;
+height: 190px;
+background-size: 95%;
+animation: spin 50s linear infinite
+}
+@keyframes spin {
+from {transform:rotate(0deg);}
+to {transform:rotate(360deg);}
