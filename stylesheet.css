@@ -21,18 +21,20 @@ body {
     /* Scale the background image to be as large as possible */
     background-size: cover;
     
-/*  div.rocket  url("http://1.bp.blogspot.com/_ZZwcWAd8-r8/TUX56btozUI/AAAAAAAACbU/1flPptwuCYs/s1600/rocketship+1.png");
-    /*image: */
+  /*div.rocket  url("http://1.bp.blogspot.com/_ZZwcWAd8-r8/TUX56btozUI/AAAAAAAACbU/1flPptwuCYs/s1600/rocketship+1.png");*/
     /*animation: animatedBackground 40s linear infinite; */
     /* The animation code */
-@keyframes flying {
+@keyframes flyinG {
   from { background-position: 0 0; }
   to { background-position: 100% 0; }
 }
 
 /* The element to apply the animation to */
 div.rocket {
-   animation: flying 5s linear 2s infinite alternate;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: -200px;
+  /*animation: flyinG 5s linear 2s infinite alternate;*/
    /*/* width: 200px;
     height: 200px;
 /*    background-color: red;
@@ -41,6 +43,14 @@ div.rocket {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;*/
+    -webkit-animation: RocketMove 5s infinite; /* Chrome, Safari, Opera  */
+    animation: RocketMove 5s infinite;
+}
+@keyframes RocketMove {
+    0%   {top: 10px;}   /*0%   {top: 0px;}*/
+    25%  {top: 20px;}   /*25%  {top: 200px;}*/
+    75%  {top: 50px}    /*75%  {top: 50px}*/
+    100% {top: 20px;}   /*100% {top: 100px;}*/ 
 }
 
 {
@@ -146,14 +156,10 @@ to {transform:rotate(360deg);}
   }*/
 
   .toggle{
-
     opacity: 1;
     webkit-transition: opacity 1s;
     transition: opacity 1s;
-
   }
-
-
 
 /*img {
     position:center fixed;
@@ -162,7 +168,6 @@ to {transform:rotate(360deg);}
    filter: alpha(opacity=50);
    width: 50%;
 }*/
-
 
 #content {
     background: #D0E5FF;
@@ -207,14 +212,12 @@ to {transform:rotate(360deg);}
  text-align: center;*/
 
 /*Comments box*/
-
 #respond {
   margin-top: 40px;
   margin-bottom: 40px;
   margin-right: 40px;
   margin-left: 40px;
 }
-
 #respond input[type='text'],
 #respond input[type='email'], 
 #respond textarea {
@@ -238,15 +241,33 @@ to {transform:rotate(360deg);}
 
 /*stopwatch, class=.  id=#*/ 
 .watch { text-align: center; color: red;}
+
 /*comments displayed*/
 /*#posts-list.has-comments li.no-comments {
   display: none;
 }*/
 
-/*Popup box*/
+/*Popup box */ /*position relative?*/
 .popup-position { display: none; position: fixed; top: 0; left: 0; background-color: rgba[0,0,0,0.7]; width: 100%; height: 100%;}
 /* display:none gets rid of the popup; absolute (fixed to top of page), or fixed (to page) - background can still scroll*/
 #popup-wrapper { width: 500px; margin: 70px auto; text-align: left;}
 #popup-container { background-color: darkgrey; padding: 20px; border-radius: 4px;}
 
 #wrapper( width: 960px; margin: 40px auto; text-align: left;)
+
+/*spinning jupiter*/
+/*
+p.jupiterR {
+animation: spin 50s linear infinite;
+  
+   -moz-animation: spin 10s ease-in-out infinite;
+   WebKit - Chrome and Safari 
+   -webkit-animation: spin 10s ease-in-out infinite;
+   /* general syntax */
+ /* animation: spin 10s ease-in-out infinite;
+} */
+/*
+@keyframes spin {
+from {transform:rotate(0deg);}
+to {transform:rotate(360deg);} */
+
