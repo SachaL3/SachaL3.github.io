@@ -26,9 +26,14 @@
                 cog1.style.transform = "rotate("+degrees+"deg)";
               }
               looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')', speed);
+              //clockwise, cw
               degrees++;
               if(degrees > 359){
                 degrees = 1;
+                //counter-clockwise, ccw
+              //      degrees--;
+              // if(degrees < 359){
+              //   degrees = -1;             
               }
               document.getElementById("status").innerHTML = "rotate("+degrees+"deg)"; //for showing the rotating degrees
             }
@@ -77,7 +82,7 @@
           </div><!-- Popup container end, background for popup box-->
         </div><!-- Popup wrapper popup end --> 
         <p class="jupiterR" style="text-align: right;"><a href="javascript:void(0)" onclick="toggle_visibility('popup-box4');"><img id="abc" src="http://a1star.com/images/planet-jupiter-large.gif" alt="jupiter"></a></p>
-          <script>rotateAnimation("abc",20);</script>
+          <script>rotateAnimation("abc",30);</script> <!--faster speed lower number-->
           
 <!-- <div class="jupiterR"> -->
     </div> <!-- Popup box 4 end-->
