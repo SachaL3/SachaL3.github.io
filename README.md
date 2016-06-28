@@ -28,8 +28,9 @@ Stop Watch Challenge
 
 <br> Current Updates<br>
 <ul>
-	<li>28.06.2016 <p>
-		Added Pop-Up Boxes, and credits</p> Added hidden box with rotating exist button with JS in html file.
-		Can change the rotation to negitive by:
-		<br>degrees--;<br>if(degrees < 359){<br>degrees = -1; </li>
+	<li>28.06.2016
+	<p>Added Pop-Up Boxes, and credits</p> 
+	Added hidden box with rotating exist button with JS in html file.<br>Can change the rotation to negitive by:
+	<br>degrees--;<br>if (degrees < -359) {<br>degrees = -1; }
+	<p> Tidied up html, css, js & added new files to contain certain scripts</p></li>
 </ul>
