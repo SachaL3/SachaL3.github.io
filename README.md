@@ -24,13 +24,17 @@ I have added a footer with a moving element using CSS, there is also the marquee
 
 
 <b>Tuesday 21th June to Friday 24th June 2016</b>
-Stop Watch Challenge
+<br>Stop Watch Challenge
 
-<br> Current Updates<br>
+<br><u>Current Updates</u><br>
 <ul>
+	<li>29.06.2016
+	<p></p>
+	</li>
 	<li>28.06.2016
 	<p>Added Pop-Up Boxes, and credits</p> 
 	Added hidden box with rotating exist button with JS in html file.<br>Can change the rotation to negitive by:
 	<br>degrees--;<br>if (degrees < -359) {<br>degrees = -1; }
 	<p> Tidied up html, css, js & added new files to contain certain scripts</p></li>
+
 </ul>
